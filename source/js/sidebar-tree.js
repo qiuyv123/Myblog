@@ -77,9 +77,8 @@
   }
 
   function renameNavTitle() {
-    document.querySelectorAll('#blog-info .site-name').forEach(function (item) {
-      item.textContent = '秋屿_Blog'
-    })
+    const siteTitle = document.querySelector('#blog-info .nav-site-title .site-name')
+    if (siteTitle) siteTitle.textContent = '秋屿_Blog'
   }
 
   function getSearchData() {

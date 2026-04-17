@@ -73,11 +73,11 @@ index_img:
 
 # The banner image of archive page
 archive_img:
-  /img/banner1-optimized.jpg
+  /img/banner2-optimized.jpg
 
 # Note: tag page, not tags page
 tag_img:
-  /img/banner1-optimized.jpg
+  /img/banner2-optimized.jpg
 
 # The banner image of tag page, you can set the banner image for each tag
 # Format:
@@ -86,7 +86,7 @@ tag_per_img:
 
 # Note: category page, not categories page
 category_img:
-  /img/banner1-optimized.jpg
+  /img/banner2-optimized.jpg
 
 # The banner image of category page, you can set the banner image for each category
 # Format:
@@ -797,8 +797,8 @@ text_align_justify: false
 
 # Add a mask to the header and footer
 mask:
-  header: true
-  footer: true
+  header: false
+  footer: false
 
 # Loading Animation
 preloader:

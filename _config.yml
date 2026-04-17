@@ -100,6 +100,7 @@ include:
 exclude:
   - img/banner1.png
   - img/banner2.png
+  - img/banner1-optimized.jpg
 ignore:
 
 # Extensions
