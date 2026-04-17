@@ -14,12 +14,10 @@ top:
         <div class="gh-name">秋屿</div>
         <div class="gh-login">qiuyv123</div>
         <p class="gh-bio">
-          2026 CS learner | Developer | 记录技术实践、项目经验与长期思考 | 保持学习的热忱
+          2026毕业 | CPP开发者 | 记录技术实践、项目经验与长期思考 | 保持学习的热忱
         </p>
         <a class="gh-profile-btn" href="https://github.com/qiuyv123" target="_blank" rel="noopener">GitHub Profile</a>
         <div class="gh-meta">
-          <span><i class="far fa-building"></i> Seeking internships and project opportunities</span>
-          <span><i class="fas fa-location-dot"></i> China</span>
-          <span><i class="far fa-clock"></i> Asia/Shanghai</span>
+          <span></i> 江苏|南京</span>
         </div>
       </div>

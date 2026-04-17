@@ -642,17 +642,21 @@ a:hover {
   flex: 0 0 auto;
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(148, 163, 184, 0.24);
+  border: 0;
   border-radius: 8px;
-  background: rgba(15, 23, 42, 0.86);
-  color: #d7dde8;
+  background: transparent;
+  color: #c9d1d9;
   cursor: pointer;
   box-shadow: none;
 }
 
 #vscode-tree-toggle:hover {
-  color: #ffffff;
-  background: rgba(47, 111, 237, 0.86);
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.12);
+}
+
+#vscode-tree-toggle i {
+  font-size: 18px;
 }
 
 #vscode-tree-mask {
@@ -783,7 +787,7 @@ body:not(.home) #page-header:not(.full_page) {
   height: 18rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   #web_bg {
     background-image: var(--site-bg-mobile) !important;
     background-position: center top;
@@ -795,15 +799,11 @@ body:not(.home) #page-header:not(.full_page) {
 
   #blog-info {
     gap: 8px;
-    max-width: calc(100% - 72px);
+    max-width: 48px;
   }
 
-  #blog-info .site-name {
-    display: inline-block;
-    max-width: calc(100vw - 112px);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  #blog-info .nav-site-title {
+    display: none !important;
   }
 
   #vscode-tree-toggle {

@@ -65,7 +65,7 @@
       toggle.id = 'vscode-tree-toggle'
       toggle.type = 'button'
       toggle.setAttribute('aria-label', '打开文章目录')
-      toggle.innerHTML = '<i class="fas fa-bars"></i>'
+      toggle.innerHTML = '<i class="fas fa-book-open"></i>'
       toggle.addEventListener('click', function () {
         document.body.classList.add('tree-open')
       })
