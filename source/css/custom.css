@@ -794,10 +794,16 @@ body:not(.home) #page-header:not(.full_page) {
   }
 
   #nav {
-    min-height: 104px;
+    min-height: 62px;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
   #blog-info {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 3;
     gap: 8px;
     max-width: 48px;
   }
@@ -807,14 +813,46 @@ body:not(.home) #page-header:not(.full_page) {
   }
 
   #vscode-tree-toggle {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+  }
+
+  #nav #menus {
+    position: static;
+  }
+
+  #nav .menus_items {
+    display: none !important;
+  }
+
+  #nav #toggle-menu {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    z-index: 3;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+  }
+
+  #nav #toggle-menu .site-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
   }
 
   #nav #search-button {
-    left: 16px;
-    right: 16px;
-    top: 62px;
+    left: 62px;
+    right: 62px;
+    top: 14px;
+    z-index: 2;
+    padding: 0;
     transform: none;
   }
 
