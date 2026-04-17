@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 秋屿的个人博客
-subtitle: '悟以往之不谏，知来者之可追'
+title: 探索未知
+subtitle: 秋屿
 description: '保持学习的热忱'
 keywords: 博客,技术,生活
-author: qiuyv
+author: 秋屿
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://qiuyv123.github.io/Myblog
-root: /Myblog/
+url: https://tdh527.top
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -74,6 +74,12 @@ tag_map:
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
 
+# Local search index for Butterfly.
+search:
+  path: search.xml
+  field: post
+  content: true
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -92,6 +98,8 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+  - img/banner1.png
+  - img/banner2.png
 ignore:
 
 # Extensions

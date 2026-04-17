@@ -1,0 +1,25 @@
+top:
+  - class_name: github-profile-card
+    id_name: github-profile-card
+    name: 个人名片
+    icon: fab fa-github
+    html: |
+      <div class="gh-profile">
+        <div class="gh-avatar-wrap">
+          <img class="gh-avatar" src="/img/Avatar.png" alt="秋屿">
+          <span class="gh-status" title="保持学习">
+            <i class="fas fa-seedling"></i>
+          </span>
+        </div>
+        <div class="gh-name">秋屿</div>
+        <div class="gh-login">qiuyv123</div>
+        <p class="gh-bio">
+          2026 CS learner | Developer | 记录技术实践、项目经验与长期思考 | 保持学习的热忱
+        </p>
+        <a class="gh-profile-btn" href="https://github.com/qiuyv123" target="_blank" rel="noopener">GitHub Profile</a>
+        <div class="gh-meta">
+          <span><i class="far fa-building"></i> Seeking internships and project opportunities</span>
+          <span><i class="fas fa-location-dot"></i> China</span>
+          <span><i class="far fa-clock"></i> Asia/Shanghai</span>
+        </div>
+      </div>

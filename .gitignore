@@ -6,3 +6,5 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+source/img/banner1.png
+source/img/banner2.png
