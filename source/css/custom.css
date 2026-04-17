@@ -1,4 +1,6 @@
 :root {
+  --site-bg-desktop: url("/img/banner2-optimized.jpg");
+  --site-bg-mobile: url("/img/banner1-optimized.jpg");
   --tech-font-serif: "STZhongsong", "华文中宋", "SimSun", "宋体", serif;
   --tech-blue: #2f6fed;
   --tech-green: #18a058;
@@ -45,6 +47,7 @@ select,
 #web_bg {
   position: fixed;
   inset: 0;
+  background-image: var(--site-bg-desktop) !important;
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
@@ -101,17 +104,21 @@ select,
 
 #nav #search-button {
   position: absolute;
-  left: 50%;
+  left: 240px;
+  right: 330px;
   top: 50%;
   z-index: 1;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%);
 }
 
 .vscode-search-box {
   position: relative;
   display: inline-flex;
   align-items: center;
-  min-width: clamp(210px, 28vw, 460px);
+  width: min(100%, 460px);
+  min-width: 210px;
   height: 30px;
   padding: 0 10px;
   border: 1px solid rgba(148, 163, 184, 0.28);
@@ -777,8 +784,26 @@ body:not(.home) #page-header:not(.full_page) {
 }
 
 @media (max-width: 768px) {
+  #web_bg {
+    background-image: var(--site-bg-mobile) !important;
+    background-position: center top;
+  }
+
+  #nav {
+    min-height: 104px;
+  }
+
   #blog-info {
     gap: 8px;
+    max-width: calc(100% - 72px);
+  }
+
+  #blog-info .site-name {
+    display: inline-block;
+    max-width: calc(100vw - 112px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   #vscode-tree-toggle {
@@ -786,10 +811,17 @@ body:not(.home) #page-header:not(.full_page) {
     height: 32px;
   }
 
+  #nav #search-button {
+    left: 16px;
+    right: 16px;
+    top: 62px;
+    transform: none;
+  }
+
   .vscode-search-box {
-    min-width: 150px;
-    width: 42vw;
-    max-width: 280px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
   }
 
   #recent-posts > .recent-post-item,
