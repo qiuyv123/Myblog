@@ -1,6 +1,73 @@
 (function () {
   let searchDataPromise
 
+  const treeSections = [
+    {
+      title: '随笔',
+      url: '/categories/随笔/',
+      icon: 'far fa-file-lines',
+      items: [
+        { title: '日常记录与想法沉淀', url: '/categories/随笔/', icon: 'far fa-file-lines' }
+      ]
+    },
+    {
+      title: 'Linux相关',
+      url: '/categories/技术笔记/',
+      icon: 'far fa-file-code',
+      items: [
+        { title: '开发实践与问题排查', url: '/categories/技术笔记/', icon: 'far fa-file-code' }
+      ]
+    },
+    {
+      title: '项目复盘',
+      url: '/categories/项目复盘/',
+      icon: 'far fa-file-lines',
+      items: [
+        { title: 'Linux高性能服务器开发思路(一)', url: '/2026/04/19/Linux/Linux高性能服务器开发思路-(一)/', icon: 'far fa-file-lines' }
+      ]
+    },
+    {
+      title: '建站',
+      url: '/categories/建站记录/',
+      icon: 'far fa-file-code',
+      items: [
+        { title: 'Hexo 与 Butterfly 美化', url: '/categories/建站记录/', icon: 'far fa-file-code' }
+      ]
+    }
+  ]
+
+  function renderTree() {
+    const sectionHtml = treeSections.map(function (section) {
+      const items = section.items.map(function (item) {
+        return [
+          '<a href="' + item.url + '">',
+          '  <i class="' + item.icon + '"></i><span>' + item.title + '</span>',
+          '</a>'
+        ].join('')
+      }).join('')
+
+      return [
+        '<details open>',
+        '  <summary><i class="fas fa-folder"></i><span>' + section.title + '</span></summary>',
+        items,
+        '</details>'
+      ].join('')
+    }).join('')
+
+    return [
+      '<div class="tree-header">',
+      '  <span>EXPLORER</span>',
+      '  <button type="button" id="vscode-tree-close" aria-label="关闭文章目录"><i class="fas fa-xmark"></i></button>',
+      '</div>',
+      '<nav class="tree-content">',
+      '  <details open>',
+      '    <summary><i class="fas fa-folder-open"></i><span>秋屿_Blog</span></summary>',
+      sectionHtml,
+      '  </details>',
+      '</nav>'
+    ].join('')
+  }
+
   function ensurePanel() {
     if (document.getElementById('vscode-tree-panel')) return
 
@@ -9,34 +76,8 @@
 
     const panel = document.createElement('aside')
     panel.id = 'vscode-tree-panel'
-    panel.setAttribute('aria-label', '文章文件树')
-    panel.innerHTML = [
-      '<div class="tree-header">',
-      '  <span>EXPLORER</span>',
-      '  <button type="button" id="vscode-tree-close" aria-label="关闭文章目录"><i class="fas fa-xmark"></i></button>',
-      '</div>',
-      '<nav class="tree-content">',
-      '  <details open>',
-      '    <summary><i class="fas fa-folder-open"></i><span>秋屿_Blog</span></summary>',
-      '    <details open>',
-      '      <summary><i class="fas fa-folder"></i><span>随笔</span></summary>',
-      '      <a href="/categories/随笔/"><i class="far fa-file-lines"></i><span>日常记录与想法沉淀</span></a>',
-      '    </details>',
-      '    <details open>',
-      '      <summary><i class="fas fa-folder"></i><span>技术笔记</span></summary>',
-      '      <a href="/categories/"><i class="far fa-file-code"></i><span>开发实践与问题排查</span></a>',
-      '    </details>',
-      '    <details open>',
-      '      <summary><i class="fas fa-folder"></i><span>项目复盘</span></summary>',
-      '      <a href="/categories/"><i class="far fa-file-lines"></i><span>项目过程与经验总结</span></a>',
-      '    </details>',
-      '    <details open>',
-      '      <summary><i class="fas fa-folder"></i><span>建站记录</span></summary>',
-      '      <a href="/categories/"><i class="far fa-file-code"></i><span>Hexo 与 Butterfly 美化</span></a>',
-      '    </details>',
-      '  </details>',
-      '</nav>'
-    ].join('')
+    panel.setAttribute('aria-label', '文章目录')
+    panel.innerHTML = renderTree()
 
     document.body.append(mask, panel)
 
